@@ -21,7 +21,7 @@ def saveFile():
 def detecionCorners():
     img = cv2.imread(initImagePath)
     gray_img = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
-    corners = cv2.goodFeaturesToTrack(gray_img, 10000, 0.7, 0)
+    corners = cv2.goodFeaturesToTrack(gray_img, 10000, 0.6, 2)
     corners = np.int0(corners)
 
     for i in corners:
